@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Production Services | MelBroadcast Productions" />
+  <meta name="theme-color" content="#0b1220" />
+  <meta property="og:title" content="Production Services" />
+  <meta property="og:description" content="Production coordination and event delivery support for live broadcasts and major events." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://melbroadcastproductions.com/productionservices.html" />
+  <title>Production Services | MelBroadcast Productions</title>
+  <style>
+
+    :root{
+      --bg:#0b1220;
+      --card:#101b33;
+      --text:#e9eefc;
+      --muted:#a7b3d6;
+      --brand:#5eead4;
+      --brand2:#60a5fa;
+      --border:rgba(255,255,255,.10);
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius:18px;
+      --max:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:radial-gradient(1200px 600px at 20% -10%, rgba(96,165,250,.18), transparent 55%),
+                                 radial-gradient(1000px 550px at 90% 0%, rgba(94,234,212,.18), transparent 50%),
+                                 var(--bg);
+              color:var(--text); font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Arial,"Apple Color Emoji","Segoe UI Emoji";}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--max);margin:0 auto;padding:24px}
+    .nav{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(10px);
+      background: rgba(11,18,32,.55);
+      border-bottom:1px solid var(--border);
+    }
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px; padding:14px 24px; max-width:var(--max); margin:0 auto;}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.2px}
+    .mark{
+      width:34px;height:34px;border-radius:10px;
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      box-shadow:0 8px 22px rgba(96,165,250,.18);
+    }
+    .menu{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+    .menu a{color:var(--muted);font-weight:600}
+    .menu a:hover{color:var(--text)}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      padding:10px 14px;border-radius:12px;border:1px solid var(--border);
+      background: rgba(255,255,255,.03);
+      color:var(--text); font-weight:700;
+    }
+    .btn.primary{
+      background: linear-gradient(135deg, rgba(94,234,212,.18), rgba(96,165,250,.18));
+      border-color: rgba(94,234,212,.35);
+    }
+    .btn:hover{transform:translateY(-1px); transition:.15s ease; box-shadow:0 14px 30px rgba(0,0,0,.25)}
+    .hero{padding:54px 0 22px}
+    .hero-grid{display:grid;grid-template-columns: 1.2fr .8fr;gap:22px;align-items:stretch}
+    .h1{font-size:44px;line-height:1.05;margin:0 0 12px;font-weight:900;letter-spacing:-.8px}
+    .lead{color:var(--muted);font-size:18px;margin:0 0 22px}
+    .pill-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+    .pill{
+      border:1px solid var(--border); background:rgba(255,255,255,.03);
+      padding:7px 10px;border-radius:999px;color:var(--muted);font-weight:700;font-size:13px
+    }
+    .card{
+      background: linear-gradient(180deg, rgba(16,27,51,.9), rgba(16,27,51,.65));
+      border:1px solid var(--border); border-radius:var(--radius);
+      box-shadow:var(--shadow); padding:18px;
+    }
+    .stats{display:grid;grid-template-columns: repeat(2,1fr); gap:12px}
+    .stat{padding:14px;border-radius:14px;border:1px solid var(--border); background:rgba(255,255,255,.02)}
+    .stat b{display:block;font-size:22px}
+    .stat span{color:var(--muted);font-weight:650;font-size:13px}
+    .section{padding:34px 0}
+    .section h2{margin:0 0 10px;font-size:26px;letter-spacing:-.2px}
+    .sub{margin:0 0 18px;color:var(--muted)}
+    .grid3{display:grid;grid-template-columns: repeat(3, 1fr); gap:14px}
+    .grid2{display:grid;grid-template-columns: repeat(2, 1fr); gap:14px}
+    .item h3{margin:0 0 8px;font-size:16px}
+    .item p{margin:0;color:var(--muted)}
+    .tagline{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .kpi{
+      display:flex;gap:10px;align-items:flex-start
+    }
+    .dot{
+      width:10px;height:10px;margin-top:7px;border-radius:999px;background:linear-gradient(135deg,var(--brand),var(--brand2));
+      box-shadow:0 0 0 4px rgba(94,234,212,.10);
+      flex:0 0 auto
+    }
+    .list{margin:12px 0 0;padding:0;list-style:none;display:grid;gap:10px}
+    .list li{display:flex;gap:10px;align-items:flex-start;color:var(--muted)}
+    .list li::before{
+      content:"✓"; color:var(--brand); font-weight:900; margin-top:1px
+    }
+    .footer{
+      padding:28px 0 50px; color:var(--muted); border-top:1px solid var(--border); margin-top:30px
+    }
+    .small{font-size:13px;color:var(--muted)}
+    .split{display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+    .contact{
+      display:grid;gap:12px
+    }
+    .field{
+      display:grid;gap:6px
+    }
+    .field label{font-size:13px;color:var(--muted);font-weight:700}
+    .field input,.field textarea{
+      width:100%; padding:12px 12px; border-radius:12px;
+      border:1px solid var(--border); background:rgba(255,255,255,.02); color:var(--text);
+      outline:none;
+    }
+    .field input:focus,.field textarea:focus{border-color:rgba(94,234,212,.45); box-shadow:0 0 0 4px rgba(94,234,212,.08)}
+    .note{color:var(--muted);font-size:13px;margin:10px 0 0}
+    @media (max-width: 900px){
+      .hero-grid{grid-template-columns:1fr}
+      .h1{font-size:36px}
+      .grid3{grid-template-columns:1fr}
+      .grid2{grid-template-columns:1fr}
+      .stats{grid-template-columns:1fr}
+    }
+  
+  </style>
+</head>
+
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <div class="logo">
+        <img src="logo.png" alt="MelBroadcast Productions logo" style="height:34px;width:auto;border-radius:10px" />
+        <div>MelBroadcast Productions</div>
+      </div>
+      <nav class="menu" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="#deliverables">Deliverables</a>
+        <a href="#services">Services</a>
+        <a href="#eventtypes">Event types</a>
+        <a href="#why">Why</a>
+        <a href="#contact">Contact</a>
+        <a class="btn primary" href="#contact">Request availability</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero" id="top">
+      <div class="hero-grid">
+        <div>
+          <h1 class="h1">Production Services</h1>
+          <p class="lead">
+            MelBroadcast Productions delivers calm, structured production support for live broadcasts, studio shows, and major events — planning, coordination, timing, and clean execution from pre-production through show-day and post-show wrap.
+          </p>
+
+          <div class="tagline">
+            <a class="btn primary" href="#contact">Request availability</a>
+          </div>
+
+          <div class="pill-row" aria-label="Highlights">
+            <span class="pill">Run-of-show & rundowns</span>
+            <span class="pill">Call sheets</span>
+            <span class="pill">Crew & stakeholder coordination</span>
+            <span class="pill">Show-day timing</span>
+            <span class="pill">Event operations</span>
+          </div>
+        </div>
+
+        <aside class="card">
+<h2 style="margin:0 0 10px;font-size:18px">At a glance</h2>
+          <ul class="list">
+            <li>UAE-based delivery with international event experience</li>
+            <li>Operations-first approach: clear plans, clear comms, clear timing</li>
+            <li>Works smoothly with engineering, venue teams, vendors, and talent</li>
+            <li>Scalable support: single-event to multi-day activations</li>
+          </ul>
+          <p class="note">
+            Tell us your event dates, location, and scope — we’ll reply with availability and a simple plan.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+
+    <section class="section" id="deliverables">
+      <h2>What we deliver</h2>
+      <p class="sub">Practical production support deliverables you can use immediately — before, during, and after the show.</p>
+
+      <div class="grid3">
+        <div class="card item">
+          <h3>Pre-production pack</h3>
+          <p>Turn your brief into a clear, workable plan.</p>
+          <ul class="list">
+            <li>Run-of-show / rundown structure</li>
+            <li>Call sheets, contacts, crew roles</li>
+            <li>Venue / access / logistics alignment</li>
+          </ul>
+        </div>
+
+        <div class="card item">
+          <h3>Show-day control</h3>
+          <p>Keep timing, cues, and communication stable under pressure.</p>
+          <ul class="list">
+            <li>Timing & cue management</li>
+            <li>Stakeholder coordination</li>
+            <li>Issue escalation + fast resolution</li>
+          </ul>
+        </div>
+
+        <div class="card item">
+          <h3>Post-show wrap</h3>
+          <p>Close cleanly and improve the next show.</p>
+          <ul class="list">
+            <li>Debrief notes & actions</li>
+            <li>Vendor follow-up & close-out</li>
+            <li>Lessons learned / improvements</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <h2>Production services</h2>
+      <p class="sub">Choose a package or combine per project.</p>
+
+      <div class="grid3">
+        <div class="card item">
+          <h3>Event & broadcast production coordination</h3>
+          <p>End-to-end coordination across production, engineering, venue, vendors, and talent.</p>
+          <ul class="list">
+            <li>Stakeholder & vendor coordination</li>
+            <li>Schedule control & readiness checks</li>
+            <li>On-site execution support</li>
+          </ul>
+        </div>
+
+        <div class="card item">
+          <h3>Large-event operations</h3>
+          <p>Operations-first delivery for complex, multi-team events.</p>
+          <ul class="list">
+            <li>Access, logistics, permits alignment</li>
+            <li>Team briefing & comms structure</li>
+            <li>Contingency planning</li>
+          </ul>
+        </div>
+
+        <div class="card item">
+          <h3>TV production & creative support</h3>
+          <p>Support for studio, live shows, and event coverage with strong communication and timing.</p>
+          <ul class="list">
+            <li>Rundown discipline & cue flow</li>
+            <li>Talent / guest handling</li>
+            <li>Creative coordination (as needed)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="eventtypes">
+      <h2>Event types</h2>
+      <p class="sub">Typical environments Herny supports.</p>
+
+      <div class="grid2">
+        <div class="card">
+          <h3 style="margin:0 0 10px">Major events & ceremonies</h3>
+          <ul class="list">
+            <li>National day / cultural shows</li>
+            <li>Expo-scale activations</li>
+            <li>High-profile VIP events</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3 style="margin:0 0 10px">Broadcast & studio production</h3>
+          <ul class="list">
+            <li>Live shows and studio programs</li>
+            <li>Outside broadcasts (OB) support</li>
+            <li>Multi-location / remote workflows</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="note">You mentioned “G20 / Asian Games” scale — if you want, share 3–5 exact project names and roles and I’ll list them here as “Selected projects”.</p>
+    </section>
+
+    <section class="section" id="why">
+      <h2>Why MelBroadcast Productions</h2>
+      <p class="sub">Reliable delivery with clear communication and disciplined timing.</p>
+
+      <div class="grid2">
+        <div class="card">
+          <ul class="list">
+            <li>Based in the UAE with international experience</li>
+            <li>Experienced delivery across TV production and major events</li>
+            <li>Clear communication and positive on-site energy</li>
+            <li>Proactive coordination and problem-solving</li>
+            <li>Continuous improvement mindset</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3 style="margin:0 0 10px">Preferred info for a quote</h3>
+          <ul class="list">
+            <li>Event name + dates</li>
+            <li>Location + venue</li>
+            <li>Call time / show time</li>
+            <li>Scope (teams, talent, live/recorded)</li>
+            <li>Stakeholders / approvals</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section" id="contact">
+      <h2>Contact</h2>
+      <p class="sub">For production bookings and availability.</p>
+
+      <div class="grid2">
+<div class="card">
+          <h3 style="margin:0 0 10px">Contact</h3>
+          <p style="margin:0;color:var(--muted)">
+            Email: <a class="btn" style="margin-top:10px" href="mailto:herny@melbroadcastproductions.com">herny@melbroadcastproductions.com</a><br/>
+            Phone/WhatsApp: <a class="btn" style="margin-top:10px" href="tel:+971564934585">+971 56 493 4585</a><br/>
+          </p>
+          <p class="note">Include your event dates, location, and scope — we’ll reply with availability and a simple plan.</p>
+        </div>
+
+        <div class="card">
+          <h3 style="margin:0 0 10px">Preferred details to include</h3>
+          <ul class="list">
+            <li>Event name + dates</li>
+            <li>Location + venue</li>
+            <li>Call time / show time</li>
+            <li>Scope (talent, crew size, live/recorded)</li>
+            <li>Any stakeholders or approvals</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="split">
+        <div class="small">© <span id="y"></span> MelBroadcast Productions. All rights reserved.</div>
+        <div class="small"><a href="#top">Back to top</a></div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
