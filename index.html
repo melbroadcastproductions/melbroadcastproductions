@@ -1,1 +1,376 @@
-Mel Broadcast Productions Home
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="MelBroadcast Productions — Outside Broadcast engineering, systems integration, and live production support." />
+  <meta name="theme-color" content="#0b1220" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="MelBroadcast Productions" />
+  <meta property="og:description" content="Outside Broadcast engineering, systems integration, and live production support." />
+  <meta property="og:type" content="website" />
+  <!-- TODO: add your real domain once live -->
+  <meta property="og:url" content="https://melbroadcastproductions.com/" />
+  <!-- TODO: add an image in your site folder and set og:image -->
+  <meta property="og:image" content="https://melbroadcastproductions.com/og-image.jpg" />
+
+  <title>MelBroadcast Productions</title>
+
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#101b33;
+      --text:#e9eefc;
+      --muted:#a7b3d6;
+      --brand:#5eead4;
+      --brand2:#60a5fa;
+      --border:rgba(255,255,255,.10);
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius:18px;
+      --max:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:radial-gradient(1200px 600px at 20% -10%, rgba(96,165,250,.18), transparent 55%),
+                                 radial-gradient(1000px 550px at 90% 0%, rgba(94,234,212,.18), transparent 50%),
+                                 var(--bg);
+              color:var(--text); font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Arial,"Apple Color Emoji","Segoe UI Emoji";}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--max);margin:0 auto;padding:24px}
+    .nav{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(10px);
+      background: rgba(11,18,32,.55);
+      border-bottom:1px solid var(--border);
+    }
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px; padding:14px 24px; max-width:var(--max); margin:0 auto;}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.2px}
+    .mark{
+      width:34px;height:34px;border-radius:10px;
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      box-shadow:0 8px 22px rgba(96,165,250,.18);
+    }
+    .menu{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+    .menu a{color:var(--muted);font-weight:600}
+    .menu a:hover{color:var(--text)}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      padding:10px 14px;border-radius:12px;border:1px solid var(--border);
+      background: rgba(255,255,255,.03);
+      color:var(--text); font-weight:700;
+    }
+    .btn.primary{
+      background: linear-gradient(135deg, rgba(94,234,212,.18), rgba(96,165,250,.18));
+      border-color: rgba(94,234,212,.35);
+    }
+    .btn:hover{transform:translateY(-1px); transition:.15s ease; box-shadow:0 14px 30px rgba(0,0,0,.25)}
+    .hero{padding:54px 0 22px}
+    .hero-grid{display:grid;grid-template-columns: 1.2fr .8fr;gap:22px;align-items:stretch}
+    .h1{font-size:44px;line-height:1.05;margin:0 0 12px;font-weight:900;letter-spacing:-.8px}
+    .lead{color:var(--muted);font-size:18px;margin:0 0 22px}
+    .pill-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+    .pill{
+      border:1px solid var(--border); background:rgba(255,255,255,.03);
+      padding:7px 10px;border-radius:999px;color:var(--muted);font-weight:700;font-size:13px
+    }
+    .card{
+      background: linear-gradient(180deg, rgba(16,27,51,.9), rgba(16,27,51,.65));
+      border:1px solid var(--border); border-radius:var(--radius);
+      box-shadow:var(--shadow); padding:18px;
+    }
+    .stats{display:grid;grid-template-columns: repeat(2,1fr); gap:12px}
+    .stat{padding:14px;border-radius:14px;border:1px solid var(--border); background:rgba(255,255,255,.02)}
+    .stat b{display:block;font-size:22px}
+    .stat span{color:var(--muted);font-weight:650;font-size:13px}
+    .section{padding:34px 0}
+    .section h2{margin:0 0 10px;font-size:26px;letter-spacing:-.2px}
+    .sub{margin:0 0 18px;color:var(--muted)}
+    .grid3{display:grid;grid-template-columns: repeat(3, 1fr); gap:14px}
+    .grid2{display:grid;grid-template-columns: repeat(2, 1fr); gap:14px}
+    .item h3{margin:0 0 8px;font-size:16px}
+    .item p{margin:0;color:var(--muted)}
+    .tagline{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .kpi{
+      display:flex;gap:10px;align-items:flex-start
+    }
+    .dot{
+      width:10px;height:10px;margin-top:7px;border-radius:999px;background:linear-gradient(135deg,var(--brand),var(--brand2));
+      box-shadow:0 0 0 4px rgba(94,234,212,.10);
+      flex:0 0 auto
+    }
+    .list{margin:12px 0 0;padding:0;list-style:none;display:grid;gap:10px}
+    .list li{display:flex;gap:10px;align-items:flex-start;color:var(--muted)}
+    .list li::before{
+      content:"✓"; color:var(--brand); font-weight:900; margin-top:1px
+    }
+    .footer{
+      padding:28px 0 50px; color:var(--muted); border-top:1px solid var(--border); margin-top:30px
+    }
+    .small{font-size:13px;color:var(--muted)}
+    .split{display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+    .contact{
+      display:grid;gap:12px
+    }
+    .field{
+      display:grid;gap:6px
+    }
+    .field label{font-size:13px;color:var(--muted);font-weight:700}
+    .field input,.field textarea{
+      width:100%; padding:12px 12px; border-radius:12px;
+      border:1px solid var(--border); background:rgba(255,255,255,.02); color:var(--text);
+      outline:none;
+    }
+    .field input:focus,.field textarea:focus{border-color:rgba(94,234,212,.45); box-shadow:0 0 0 4px rgba(94,234,212,.08)}
+    .note{color:var(--muted);font-size:13px;margin:10px 0 0}
+    @media (max-width: 900px){
+      .hero-grid{grid-template-columns:1fr}
+      .h1{font-size:36px}
+      .grid3{grid-template-columns:1fr}
+      .grid2{grid-template-columns:1fr}
+      .stats{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <div class="logo">
+        <img src="logo.png" alt="MelBroadcast Productions logo" style="height:34px;width:auto;border-radius:10px" />
+        <div>MelBroadcast Productions</div>
+      </div>
+      <nav class="menu" aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+        <a class="btn primary" href="#contact">Get a quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="hero-grid">
+        <div>
+          <h1 class="h1">Reliable live broadcast engineering — on site, on time, under control.</h1>
+          <p class="lead">
+            Outside Broadcast engineering, systems integration, and operational support for sports, events, and high-profile productions.
+            Fast troubleshooting, clean workflows, and production-ready delivery.
+          </p>
+
+          <div class="tagline">
+            <a class="btn primary" href="#contact">Request availability</a>
+            <!-- TODO: replace with your LinkedIn page -->
+            <a class="btn" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+            <!-- TODO: replace email -->
+            <a class="btn" href="mailto:mel@melbroadcastproductions.com">mel@melbroadcastproductions.com</a>
+          </div>
+
+          <div class="pill-row" aria-label="Highlights">
+            <span class="pill">OB Engineering</span>
+            <span class="pill">Systems Integration</span>
+            <span class="pill">IP / 2110 / PTP</span>
+            <span class="pill">HDR/SDR Workflows</span>
+            <span class="pill">Intercom & Comms</span>
+            <span class="pill">HSE-aware operations</span>
+          </div>
+        </div>
+
+        <aside class="card">
+          <h2 style="margin:0 0 10px;font-size:18px">What you get</h2>
+          <div class="stats">
+            <div class="stat">
+              <b>Rapid response</b>
+              <span>Clear action plan + stable recovery</span>
+            </div>
+            <div class="stat">
+              <b>Production focus</b>
+              <span>Keep the show on-air, safely</span>
+            </div>
+            <div class="stat">
+              <b>Documentation</b>
+              <span>As-built diagrams & handover notes</span>
+            </div>
+            <div class="stat">
+              <b>Long-term value</b>
+              <span>Reduce repeated faults & downtime</span>
+            </div>
+          </div>
+          <p class="note">
+            <b>Tip:</b> Replace the text above with your real metrics (years, events, channels, OB units, etc.)
+            to strengthen credibility.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section" id="services">
+      <h2>Services</h2>
+      <p class="sub">Pick a package or combine them per event / project.</p>
+
+      <div class="grid3">
+        <div class="card item">
+          <h3>Outside Broadcast Engineering</h3>
+          <p>End-to-end technical readiness: camera chains, routing, comms, tally, monitoring, power, and redundancy.</p>
+          <ul class="list">
+            <li>Pre-event checks & show-day support</li>
+            <li>Fault isolation & fast recovery</li>
+            <li>Signal flow validation & labeling</li>
+          </ul>
+        </div>
+
+        <div class="card item">
+          <h3>Systems Integration</h3>
+          <p>Design and implement broadcast systems that are stable, maintainable, and scalable.</p>
+          <ul class="list">
+            <li>Control rooms, OB vans, flypacks</li>
+            <li>Commissioning & acceptance testing</li>
+            <li>Training & operational handover</li>
+          </ul>
+        </div>
+
+        <div class="card item">
+          <h3>IP / SMPTE 2110 Readiness</h3>
+          <p>Build confidence in timing, discovery, monitoring, and resilience.</p>
+          <ul class="list">
+            <li>PTP design & troubleshooting</li>
+            <li>NMOS / flows / multicast sanity</li>
+            <li>Network documentation & monitoring</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAPABILITIES -->
+    <section class="section" id="capabilities">
+      <h2>Capabilities</h2>
+      <p class="sub">Practical, operations-first engineering for live production environments.</p>
+
+      <div class="grid2">
+        <div class="card">
+          <div class="kpi"><span class="dot"></span>
+            <div>
+              <h3 style="margin:0 0 6px">Workflow & quality</h3>
+              <p style="margin:0;color:var(--muted)">
+                HDR/SDR, 1080p/4K, audio routing, monitoring, and consistent show standards.
+              </p>
+            </div>
+          </div>
+
+          <div class="kpi" style="margin-top:14px"><span class="dot"></span>
+            <div>
+              <h3 style="margin:0 0 6px">Redundancy & resilience</h3>
+              <p style="margin:0;color:var(--muted)">
+                Practical backup paths, clean changeovers, and robust power strategies.
+              </p>
+            </div>
+          </div>
+
+          <div class="kpi" style="margin-top:14px"><span class="dot"></span>
+            <div>
+              <h3 style="margin:0 0 6px">Documentation</h3>
+              <p style="margin:0;color:var(--muted)">
+                As-built diagrams, checklists, labeling, and troubleshooting guides.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 style="margin:0 0 10px">Typical deliverables</h3>
+          <ul class="list">
+            <li>Pre-event technical checklist & sign-off</li>
+            <li>Signal flow diagrams and patch lists</li>
+            <li>PTP/network baseline and monitoring plan</li>
+            <li>Commissioning report + punch list</li>
+            <li>Handover pack for operations & maintenance</li>
+          </ul>
+          <p class="note">Replace items to match your real outputs (RFP support, CAPEX planning, etc.).</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section class="section" id="work">
+      <h2>Selected work</h2>
+      <p class="sub">Add a few recognizable examples. Keep it short and concrete.</p>
+
+      <div class="grid3">
+        <div class="card item">
+          <h3>Live sports OB support</h3>
+          <p><b>Role:</b> Engineering lead / EIC support<br/>
+             <b>Focus:</b> stability, comms, redundancy</p>
+        </div>
+        <div class="card item">
+          <h3>IP transition & troubleshooting</h3>
+          <p><b>Role:</b> Systems engineer<br/>
+             <b>Focus:</b> PTP, multicast, monitoring</p>
+        </div>
+        <div class="card item">
+          <h3>Control room upgrades</h3>
+          <p><b>Role:</b> Integration & commissioning<br/>
+             <b>Focus:</b> testing, docs, training</p>
+        </div>
+      </div>
+
+      <p class="note">
+        Want it stronger? Replace these with: event name, location, and a measurable result (e.g., “reduced repeated faults”, “cut setup time”, “zero on-air incidents”).
+      </p>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <h2>Contact</h2>
+      <p class="sub">Send a message and I’ll reply with availability and next steps.</p>
+
+      <div class="grid2">
+        <div class="card">
+          <h3 style="margin:0 0 10px">Direct</h3>
+          <p style="margin:0;color:var(--muted)">
+            Email: <a class="btn" style="margin-top:10px" href="mailto:mel@melbroadcastproductions.com">mel@melbroadcastproductions.com</a><br/>
+            Phone/WhatsApp: <span class="small">+971 50 293 3046</span><br/>
+            LinkedIn: <a class="btn" style="margin-top:10px" href="https://www.linkedin.com/" target="_blank" rel="noopener">Open profile</a>
+          </p>
+          <p class="note">Replace email/phone/LinkedIn with your real details.</p>
+        </div>
+
+        <div class="card">
+          <!-- This form uses mailto (works without a backend). -->
+          <form class="contact" action="mailto:mel@melbroadcastproductions.com" method="post" enctype="text/plain">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="Name" autocomplete="name" placeholder="Your name" required />
+            </div>
+            <div class="field">
+              <label for="company">Company</label>
+              <input id="company" name="Company" autocomplete="organization" placeholder="Company / broadcaster" />
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="Message" rows="5" placeholder="Tell me what you need (event, dates, location, scope)..." required></textarea>
+            </div>
+            <button class="btn primary" type="submit">Send</button>
+            <p class="note">Note: mailto opens the visitor’s email app. For a real web form, add a free form backend (Netlify Forms, Formspree, etc.).</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="split">
+        <div class="small">© <span id="y"></span> MelBroadcast Productions. All rights reserved.</div>
+        <div class="small">
+          <a href="#top">Back to top</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
