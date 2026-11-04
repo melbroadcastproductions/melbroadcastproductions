@@ -18,6 +18,29 @@
 
   <title>MelBroadcast Productions</title>
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Melchior Busschers",
+    "jobTitle": "Principal Broadcast System Architect & Engineering Leader",
+    "url": "http://melbroadcastproductions.com",
+    "sameAs": [
+      "https://linkedin.com"
+    ],
+    "description": "Broadcast Engineering Executive with four decades of live production leadership, OB fleet design, and host broadcasting infrastructure integration.",
+    "knowsAbout": [
+      "Outside Broadcast (OB) Fleet Engineering",
+      "System Architecture & Integration",
+      "SMPTE ST 2110 IP Migration",
+      "Host Broadcasting Venue Operations",
+      "Lead EIC & TOC Governance",
+      "OB Van & Studio Design",
+      "Ember+, NMOS, SNMP Protocol Integration"
+    ]
+  }
+  </script>
+
   <style>
     :root{
       --bg:#0b1220;
@@ -123,6 +146,15 @@
     }
     .field input:focus,.field textarea:focus{border-color:rgba(94,234,212,.45); box-shadow:0 0 0 4px rgba(94,234,212,.08)}
     .note{color:var(--muted);font-size:13px;margin:10px 0 0}
+    .form-status{
+      display:none; padding:12px 14px; border-radius:12px; font-size:14px; margin-top:8px; line-height:1.4;
+    }
+    .form-status.success{
+      display:block; background:rgba(34,197,94,.12); border:1px solid rgba(34,197,94,.35); color:#86efac;
+    }
+    .form-status.error{
+      display:block; background:rgba(239,68,68,.12); border:1px solid rgba(239,68,68,.35); color:#fca5a5;
+    }
     @media (max-width: 900px){
       .hero-grid{grid-template-columns:1fr}
       .h1{font-size:36px}
@@ -259,14 +291,26 @@
 
       <div class="carousel-inner">
 <div class="carousel-item active">
-        <img src="assets/livehd-obtruck.jpg" class="d-block w-100" alt="Engineering delivery" style="max-height:420px;object-fit:cover;filter:saturate(1.05) contrast(1.05)">
+        <img src="assets/meltonlhtmlv2.jpg" class="d-block w-100" alt="Engineering delivery" style="max-height:420px;object-fit:cover;filter:saturate(1.05) contrast(1.05)">
         <div class="carousel-caption d-none d-md-block" style="text-align:left">
           <div style="display:inline-block;background:rgba(0,0,0,.45);backdrop-filter:blur(8px);padding:12px 14px;border-radius:14px;border:1px solid rgba(255,255,255,.18)">
-            <h5 style="margin:0 0 4px;font-weight:800">Engineering delivery</h5>
-            <p style="margin:0;color:rgba(255,255,255,.85)">OB readiness • Integration • IP/2110/PTP</p>
+            <h5 style="margin:0 0 4px;font-weight:800;color:rgba(255,255,255,.85)">Moving</h5>
+            <p style="margin:0;color:rgba(255,255,255,.85)">To Holland</p>
           </div>
         </div>
       </div>
+<div class="carousel-item ">
+        <img src="assets/livehd-obtruck.jpg" class="d-block w-100" alt="Production delivery" style="max-height:420px;object-fit:cover;filter:saturate(1.05) contrast(1.05)">
+        <div class="carousel-caption d-none d-md-block" style="text-align:left">
+          <div style="display:inline-block;background:rgba(0,0,0,.45);backdrop-filter:blur(8px);padding:12px 14px;border-radius:14px;border:1px solid rgba(255,255,255,.18)">
+            <h5 style="margin:0 0 4px;font-weight:800">Production delivery</h5>
+            <p style="margin:0;color:rgba(255,255,255,.85)">Planning • Coordination • Show-day control</p>
+          </div>
+        </div>
+      </div>
+
+
+        
 <div class="carousel-item ">
         <img src="assets/ref-production.jpg" class="d-block w-100" alt="Production delivery" style="max-height:420px;object-fit:cover;filter:saturate(1.05) contrast(1.05)">
         <div class="carousel-caption d-none d-md-block" style="text-align:left">
@@ -463,7 +507,7 @@
             <li>Commissioning report + punch list</li>
             <li>Handover pack for operations & maintenance</li>
           </ul>
-          <p class="note">Replace items to match your real outputs (RFP support, CAPEX planning, etc.).</p>
+
         </div>
       </div>
     </section>
@@ -496,9 +540,7 @@
       </div>
 </div>
 
-      <p class="note">
-        Want it stronger? Replace these with: event name, location, and a measurable result (e.g., “reduced repeated faults”, “cut setup time”, “zero on-air incidents”).
-      </p>
+
     </section>
 
     <!-- CONTACT -->
@@ -515,13 +557,21 @@
             <a class="btn" style="margin-top:10px" href="https://wa.me/971502933046" target="_blank" rel="noopener">WhatsApp</a><br/>
             LinkedIn: <a class="btn" style="margin-top:10px" href="https://www.linkedin.com/" target="_blank" rel="noopener">Open profile</a>
           </p>
-          <p class="note">Replace LinkedIn with your real profile link if needed.</p>
+     
 </div>
 <div class="card">
-          <form class="contact" action="mailto:mel@melbroadcastproductions.com" method="post" enctype="text/plain">
+          <form class="contact" id="contact-form" action="https://formsubmit.co/mel@melbroadcastproductions.com" method="POST" name="contact-engineering" data-netlify="true" netlify>
+            <input type="hidden" name="_subject" value="New Engineering Inquiry — MelBroadcast Productions" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="text" name="_honey" style="display:none" />
             <div class="field">
               <label for="name">Name</label>
               <input id="name" name="Name" autocomplete="name" placeholder="Your name" required />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" type="email" name="Email" autocomplete="email" placeholder="your.email@example.com" required />
             </div>
             <div class="field">
               <label for="company">Company</label>
@@ -531,8 +581,9 @@
               <label for="message">Message</label>
               <textarea id="message" name="Message" rows="5" placeholder="Tell me what you need (event, dates, location, scope)..." required></textarea>
             </div>
-            <button class="btn primary" type="submit">Send</button>
-            <p class="note">Note: this opens your email app. For a real web form, we can enable Netlify Forms (free).</p>
+            <button class="btn primary" id="contact-submit-btn" type="submit">Send message</button>
+            <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+            <p class="note">Direct inquiry: sent immediately to MelBroadcast without leaving this page.</p>
           </form>
         </div>
 
@@ -551,6 +602,55 @@
 
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
+
+    const contactForm = document.getElementById("contact-form");
+    if (contactForm) {
+      contactForm.addEventListener("submit", async function(e) {
+        e.preventDefault();
+        const submitBtn = document.getElementById("contact-submit-btn");
+        const statusDiv = document.getElementById("form-status");
+        const originalBtnText = submitBtn.textContent;
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Sending...";
+        statusDiv.className = "form-status";
+        statusDiv.textContent = "";
+
+        const formData = new FormData(contactForm);
+
+        try {
+          const response = await fetch(contactForm.action, {
+            method: "POST",
+            body: formData,
+            headers: {
+              "Accept": "application/json"
+            }
+          });
+
+          if (response.ok) {
+            statusDiv.className = "form-status success";
+            statusDiv.textContent = "✓ Message sent successfully! Thank you, we will reply shortly.";
+            contactForm.reset();
+          } else {
+            const data = await response.json().catch(() => null);
+            statusDiv.className = "form-status error";
+            statusDiv.textContent = (data && data.message) ? data.message : "Failed to send message. Please email directly at mel@melbroadcastproductions.com.";
+          }
+        } catch (err) {
+          // Fallback to standard form submission if fetch/CORS is blocked
+          try {
+            contactForm.submit();
+            return;
+          } catch (submitErr) {
+            statusDiv.className = "form-status error";
+            statusDiv.textContent = "Could not send message. Please contact mel@melbroadcastproductions.com directly.";
+          }
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalBtnText;
+        }
+      });
+    }
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
